@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Josh Hinman's Portfolio</title>
+	<style>
+		* {
+			margin: 0;
+		}
+		a:link, a:visited {
+			color: black;
+		}
+		#features a {
+			text-decoration: none;
+			color: white;
+		}
+		html {
+			font-size: 22px;
+		}
+		body {
+			background-image: url("light-veneer.png");
+			background-color: #EEE8AA;
+			width: 88%;
+			margin: 0 auto;
+		}
+		p {
+			text-indent: 1rem;
+			padding-bottom: .5rem;
+			padding-left: .1rem;
+			padding-right .1rem;
+		}
+		#intro {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			padding-bottom: 1rem;
+			margin: .5rem auto 0 auto;
+			border-bottom: 1px solid black;
+		}
+		h1 {
+			margin-bottom: 0;
+		}
+		h4 {
+			margin-top: 1rem;
+			margin-bottom: .5rem;
+		}
+		#portrait {
+			width: 10%;
+			height: 10%;
+			border-radius: 85px;
+			margin-top: 1rem;
+
+		}
+		#title {
+			width: 85%;
+		}
+		#features {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+		.github-link {
+			display: inline-block;
+			margin-top: .5rem;
+			margin-bottom: 1rem;
+			width: 33.05%;
+		}
+
+		#about {
+			display: block;
+			width: 100%;
+			margin: .5rem auto;
+			border-top: 1px solid black;
+		}
+
+		.feature-card {
+			width: 32.4%;
+			height: 425px;
+			box-sizing: border-box;
+			border: 2px solid black;
+			overflow: hidden;
+			border-radius: 20px;
+			background-color: black;
+			color: white;
+		}
+		.feature-card:hover {
+			border: 2px solid red;
+		}
+
+		#links {
+			border-top: 1px solid black;
+			padding: 1rem 0;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div id="intro">
+			<img id="portrait" src="profilepic.jpg">
+			<div id="title">
+				<h1>Joshua Hinman</h1>
+				<h3>Software Engineer</h3>
+				<br>
+				<p>I am a passionate programmer who has been developing my skill set for many years.  I am constantly learning new things and am enthusiastic about taking on new challenges.  The projects here are written completely from scratch.  I hope you enjoy these examples of my work.</p>
+			</div>
+		</div>
+		<h4>Recent Projects</h4>
+		<div id="features">
+			<a href="https://topramenking.herokuapp.com" class="feature-card" target="_blank"><img src="trkthumb.jpg"><p><strong>Top Ramen King</strong> - a website for reading and posting reviews of instant ramen noodles.<br>Made with React, Node Express and MongoDB</p></a>
+			<a href="https://joshs-contact-manager.herokuapp.com" class="feature-card" target="_blank"><img src="contactsthumb.jpg"><p><strong>Contact Manager</strong> - an app for saving contact information.  Made with vanilla Javascript, Node Express and MongoDB</p></a>
+			<a href="https://breadth-depth.herokuapp.com/" class="feature-card" target="_blank"><img src="dbthumb.jpg"><p><strong>Depth-First vs. Breadth-First</strong> - an animated demonstration of two search algorithms.<br>Made with vanilla Javascript, HTML and CSS</p></a>
+		</div>
+		<div class="github-link"><a href="https://github.com/JoshuaHinman/topRamenKingReact.git" target="_blank">github</a></div>
+		<div class="github-link"><a href="https://github.com/JoshuaHinman/contact_manager.git" target="_blank">github</a></div>
+		<div class="github-link"><a href="https://github.com/JoshuaHinman/depth-breadth.git" target="_blank">github</a></div>
+
+		<br>
+		<div id="about">
+			<h4>More About Me</h4>
+		<p>My love of programming was first sparked when I was a teenager, fascinated with computer games. I taught myself to program in Visual Basic and then C++, trying to understand the inner workings of game engines and computer graphics.  Over the years, I've taken many programming classes, gradually adding to my knowledge and understanding of computers.</p>
+		<p>4 years ago, I started taking web development classes as a way of expanding my programming experience. I quickly realized I could excel at it, if I pursued it seriously.  After looking at different online schools, I found an in-depth, mastery based curriculum at <a href="https://launchschool.com">Launch School</a>.  Since enrolling, I have dedicated myself to learning all layers of the web stack, and learning software engineering practices.   This program focused on building strong programming fundamentals using RUBY and then went on to teach relational databases with SQL and front end with Javascript.  Today, I've completed my school courses and have continued on learning, using frameworks like Node Express and React.</p>
+
+		</div>
+		<div id="links">
+			contact: <a href="emailto: joshuahinman@gmail.com"> joshuahinman@gmail.com</a>
+		</div>
+	</main>
+</body>
+</html>
