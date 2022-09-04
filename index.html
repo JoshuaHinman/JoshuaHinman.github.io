@@ -17,41 +17,101 @@
 			font-size: 22px;
 		}
 		body {
-			background-image: url("light-veneer.png");
-			background-color: #EEE8AA;
+			background-color: #e4e4e4;
+			background-attachment: fixed;
+			color: black;
 			width: 88%;
 			margin: 0 auto;
 		}
+		main {
+			transition: all .1s;
+		}
+		main.show-modal {
+			opacity: .5;
+		}
 		p {
-			text-indent: 1rem;
-			padding-bottom: .5rem;
+			padding-bottom: .2rem;
 			padding-left: .1rem;
 			padding-right: .1rem;
 		}
-		#intro {
-			width: 100%;
-			display: flex;
-			justify-content: space-around;
-			padding-bottom: 1rem;
-			margin: .5rem auto 0 auto;
-			border-bottom: 1px solid black;
-		}
+		
 		h1 {
 			margin-bottom: 0;
+			padding-left: 1rem;
 		}
-		h4 {
-			margin-top: 1rem;
+		h3 {
+			padding-left: 1rem;
+		}
+		.section-title {
+			font-size: 1.5rem;
+			display: inline-block;
+			padding: 1rem;
+		}
+		form {
+			background-color: black;
+			color: white;
+			font-size: 1.25rem;
+			width: 50%;
+			margin: 1rem auto;
+		}
+		label {
+			display: inline-block;
+			width: 15%;
+			text-align: right;
+		}
+		input{
+			margin-top: .5rem;
+			font-size: 1rem;
+			width: 70%;
+		}
+		input[type="submit"] {
+			width: 40%;
+			margin-left: 30%;
 			margin-bottom: .5rem;
 		}
-		#portrait {
-			width: 10%;
-			height: 10%;
-			border-radius: 85px;
-			margin-top: 1rem;
-
+		textarea {
+			margin-top: .5rem;
+			font-size: .8rem;
+			width:70%;
+		}
+		#header {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			position: sticky;
+			top: 0px;
+			border-bottom: .25rem solid black;
+			margin: 2rem auto 1rem auto;
 		}
 		#title {
-			width: 85%;
+			width: 40%;
+			font-family:  Arial;
+			color: white;
+			background-color: black;
+		}
+		#links {
+			width: 60%;
+			padding: 1rem 0;
+			text-align: center;
+			color: white;
+			background-color: black;
+			display:flex;
+			justify-content: space-around;
+		}	
+		#links a {
+			text-decoration: none;
+			color: white;
+		}
+		#links a:hover {
+			text-decoration: underline;
+		}
+		#intro {
+			width: 100%;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
 		}
 		#features {
 			display: flex;
@@ -78,54 +138,219 @@
 			width: 32.4%;
 			height: 425px;
 			box-sizing: border-box;
-			border: 2px solid black;
+			border: 1px solid black;
+			border-radius: 10px;
 			overflow: hidden;
-			border-radius: 20px;
 			background-color: black;
 			color: white;
+			cursor: pointer;
 		}
 		.feature-card:hover {
-			border: 2px solid red;
+			border: 1px solid grey;
+			box-shadow: 2px 2px 4px grey, -2px -2px 4px grey;			
 		}
 
-		#links {
-			border-top: 1px solid black;
-			padding: 1rem 0;
-			text-align: center;
+		
+
+		img {
+			max-width: 100%;
+			height: 75%;
 		}
+		.modal {
+			position: fixed;
+			display: flex;
+			flex-wrap: wrap;
+			top: 50%;
+			left: 50vw;
+			background: black;
+			padding: 0;
+			width: 0px;
+			height: 0px;
+			color: white;
+			box-shadow: 5px 5px 20px rgba(0,0,0,.4);
+			border-radius: 10px;
+			font-size: 0;
+			overflow: hidden;
+			transition: all .1s;
+		}
+		.modal.show {
+			width: 50vw;
+			height: 60vh;
+			top: 20%;
+			left: 25vw;
+			font-size: 1rem;
+			z-index: 10;
+		}
+		.modal-img {
+			margin: 0;
+			width: 59%;
+			height: 65%;
+		}
+		.modal-img img {
+			width: 95%;
+			height: 95%;
+			margin: auto auto;
+			margin-top: 2%;
+			display: block;
+		}
+		.modal-text {
+			margin: 0;
+			width: 40%;
+			height: 65%;
+			position: relative;
+		}
+		.modal-description {
+			width: 100%;
+			height: 33%;
+			display: block;
+			border-top: 1px solid white;
+			padding: 1%;
+		}
+		.modal-links {
+			padding-top: 1rem;
+		}
+		.modal-links a {
+			border: 1px solid white;
+			border-radius: 3px;
+			color: white;
+			text-decoration: none;
+			margin-left: .75rem;
+			margin-right: .75rem;
+			padding: .1rem
+		}
+		
 	</style>
 </head>
 <body>
 	<main>
-		<div id="intro">
-			<img id="portrait" src="profilepic.jpg">
+		<div id="header">
 			<div id="title">
 				<h1>Joshua Hinman</h1>
 				<h3>Software Engineer</h3>
-				<br>
-				<p>I am a passionate programmer who has been developing my skill set for many years.  I am constantly learning new things and am enthusiastic about taking on new challenges.  The projects here are written completely from scratch.  I hope you enjoy these examples of my work.</p>
+			</div>
+			<div id="links"><span><a href="mailto: joshuahinman@gmail.com">joshuahinman@gmail.com</a></span> 
+							<span><a href="https://github.com/joshuahinman" target = "_blank">github.com/joshuahinman</a></span> 
+							<span><a href="Joshua_Hinman_Resume_2022_9.pdf" target = "_blank">Resume</a></span>
 			</div>
 		</div>
-		<h4>Recent Projects</h4>
+		<div id="intro"><p>I am a passionate programmer who has been developing my skill set for many years.  I am constantly learning new things and am enthusiastic about taking on new challenges.  The projects here are written completely from scratch.  I hope you enjoy these examples of my work.</p></div>
+		<div class="section-title">Recent Projects</div><small>- click for details</small>
 		<div id="features">
-			<a href="https://topramenking.herokuapp.com" class="feature-card" target="_blank"><img src="trkthumb.jpg"><p><strong>Top Ramen King</strong> - a website for reading and posting reviews of instant ramen noodles.<br>Made with React, Node Express and MongoDB</p></a>
-			<a href="https://joshs-contact-manager.herokuapp.com" class="feature-card" target="_blank"><img src="contactsthumb.jpg"><p><strong>Contact Manager</strong> - an app for saving contact information.  Made with vanilla Javascript, Node Express and MongoDB</p></a>
-			<a href="https://breadth-depth.herokuapp.com/" class="feature-card" target="_blank"><img src="dbthumb.jpg"><p><strong>Depth-First vs. Breadth-First</strong> - an animated demonstration of two search algorithms.<br>Made with vanilla Javascript, HTML and CSS</p></a>
+			<div class="feature-card" data-modal="trk-modal"><img src="trkthumb.jpg"><p><strong>Top Ramen King</strong> - a website for reading and posting reviews of instant ramen noodles.</p></div>
+			<div class="feature-card" data-modal="contacts-modal"><img src="contactsthumb.jpg"><p><strong>Contact Manager</strong> - an app for saving contact information.</div>
+			<div class="feature-card" data-modal="db-modal"><img src="dbthumb.jpg"><p><strong>Depth-First vs. Breadth-First</strong> - an animated demonstration of two search algorithms.</div>
 		</div>
-		<div class="github-link"><a href="https://github.com/JoshuaHinman/topRamenKingReact.git" target="_blank">github</a></div>
-		<div class="github-link"><a href="https://github.com/JoshuaHinman/contact_manager.git" target="_blank">github</a></div>
-		<div class="github-link"><a href="https://github.com/JoshuaHinman/depth-breadth.git" target="_blank">github</a></div>
-
 		<br>
 		<div id="about">
-			<h4>More About Me</h4>
-		<p>My love of programming was first sparked when I was a teenager, fascinated with computer games. I taught myself to program in Visual Basic and then C++, trying to understand the inner workings of game engines and computer graphics.  Over the years, I've taken many programming classes, gradually adding to my knowledge and understanding of computers.</p>
-		<p>4 years ago, I started taking web development classes as a way of expanding my programming experience. I quickly realized I could excel at it, if I pursued it seriously.  After looking at different online schools, I found an in-depth, mastery based curriculum at <a href="https://launchschool.com">Launch School</a>.  Since enrolling, I have dedicated myself to learning all layers of the web stack, and learning software engineering practices.   This program focused on building strong programming fundamentals using RUBY and then went on to teach relational databases with SQL and front end with Javascript.  Today, I've completed my school courses and have continued on learning, using frameworks like Node Express and React.</p>
+		<div class="section-title">More About Me</div>
+		<p>My love of programming was first sparked when I was a teenager, fascinated by computer games. I learned to program in Visual Basic and then C++, with an interest in computer graphics.  I've since taken many programming classes, gradually expanding my knowledge and understanding of computers.</p>
+		<p>4 years ago, I started taking web development classes and decided to pursue it seriously, as a career.  Looking at different online schools, I found an in-depth, mastery based curriculum at <a href="https://launchschool.com">Launch School</a>.  Since enrolling, I have dedicated myself to learning all layers of the web stack, and learning software engineering practices.   This program focused on building strong programming fundamentals using RUBY and then went on to teach relational databases with SQL and front end with Javascript.  Today, I've completed my school courses and have continued learning, using frameworks like Node Express and React.</p>
+		</div>
+		<hr>
+		<br>
+		<form id="message-form" action="https://formsubmit.co/joshuahinman@gmail.com" method="post">
+			<legend>Send me a message:</legend>
+			<label for="name">Name:</label>
+			<input type="text" name="name"><br>
+			<label for="email">Email:</label>
+			<input type="email" name="email"><br>
+			<label for="message">Message:</label>
+			<textarea form="message-form" name="message" rows="5"></textarea><br>
+			<input type="submit" value="Send">
+		</form>
 
-		</div>
-		<div id="links">
-			contact: <a href="emailto: joshuahinman@gmail.com"> joshuahinman@gmail.com</a>
-		</div>
 	</main>
+	<div class="modal" id="trk-modal">
+		<div class="modal-img">
+			<img src="trkthumb.jpg" alt="thumb"/>
+		</div>
+		<div class="modal-text">
+			<h1>Top Ramen King</h1>
+			<ul>Built using
+				<li>React</li> 
+				<li>Node Express</li>
+				<li>MongoDB</li>
+			</ul>
+			<div class="modal-links"><a href="https://github.com/JoshuaHinman/topRamenKingReact.git" target="_blank">Code on github</a>
+									<a href="https://topramenking.herokuapp.com/" target="_blank">Open app</a>
+			</div>
+		</div>
+		<div class="modal-description">
+			<p>This app allows users to browse, search and create reviews about instant ramen packages.  I created custom UI elements for this project, including ratings with multiple icons to choose from, and a photo uploader that automatically crops the image.  I consider this a passion project, both because it is about something I really enjoy, and also because I have spent alot of time on it.</p>
+		</div>
+	</div>
+	<div class="modal" id="contacts-modal">
+		<div class="modal-img">
+			<img src="contactsthumb.jpg" alt="thumb"/>
+		</div>
+		<div class="modal-text">
+			<h1>Contacts App</h1>
+			<ul>Built using
+				<li>Javascript</li> 
+				<li>HTML / CSS</li>
+				<li>Node Express</li>
+				<li>MongoDB</li>
+			</ul>
+			<div class="modal-links"><a href="https://github.com/JoshuaHinman/contact_manager.git" target="_blank">Code on github</a>
+									<a href="https://joshs-contact-manager.herokuapp.com/" target="_blank">Open app</a>
+			</div>
+		</div>
+		<div class="modal-description">
+			<p>This app allows the user to create, edit and filter a list of contacts.  Contacts can be searched by either name or tag.  I implemented the front end using an MVC approach, with seperate Model, View and Controller classes.  The Model class handles all database queries, while the View class renders the page and handles user input.  The Controller class is a parent class that mediates between the other two.</p>
+		</div>
+	</div>
+	<div class="modal" id="db-modal">
+		<div class="modal-img">
+			<img src="dbthumb.jpg" alt="thumb"/>
+		</div>
+		<div class="modal-text">
+			<h1>Depth-First vs. Breadth-First Demo</h1>
+			<ul>Built using
+				<li>Javascript</li> 
+				<li>HTML / CSS</li>
+			</ul>
+			<div class="modal-links"><a href="https://github.com/JoshuaHinman/depth-breadth.git" target="_blank">Code on github</a>
+									<a href="http://breadth-depth.herokuapp.com/" target="_blank">Open app</a>
+			</div>
+		</div>
+		<div class="modal-description">
+			<p>I created this page to demonstrate and explain two recursive search algorithms. It shows code examples for both algorithms, with explanations, as well as an animated DOM-like graph diagram. This diagram is randomly generated and can be recreated at the push of a button.</p>
+		</div>
+	</div>
+	
 </body>
+<footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const main = document.querySelector('main');
+			const cards = document.querySelectorAll('.feature-card');
+			let modal = null;
+			let modalShow = false;
+
+			const openModal = (e) => {
+				e.preventDefault();
+				e.stopPropagation();
+				if (modal) modal.classList.toggle('show');
+				const modalName = e.target.closest('.feature-card').dataset.modal;
+				modal = document.querySelector(`#${modalName}`)
+				modal.classList.toggle('show');
+				main.classList.toggle('show-modal');
+				modalShow = !modalShow;
+			}
+
+			const closeModal = (e) => {
+				//if not clicking on a modal
+				if (!e.target.closest('.modal')) {
+					modal.classList.toggle('show');
+					main.classList.toggle('show-modal');
+					modal = null;
+					modalShow = false;
+				}
+			}
+
+			cards.forEach((card) => card.addEventListener('click', (e) => {if (!modalShow) openModal(e)}));
+			document.addEventListener('click', (e) => {if (modalShow) closeModal(e)})
+		})
+	</script>
+</footer>
 </html>
