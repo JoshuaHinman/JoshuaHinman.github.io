@@ -1,229 +1,13 @@
 <!DOCTYPE html>
-<html>
 <head>
+	<meta charset="utf-8">
+	<meta name="author" content="Josh Hinman">
 	<title>Josh Hinman's Portfolio</title>
-	<style>
-		* {
-			margin: 0;
-		}
-		a:link, a:visited {
-			color: black;
-		}
-		#features a {
-			text-decoration: none;
-			color: white;
-		}
-		html {
-			font-size: 22px;
-		}
-		body {
-			background-color: #e4e4e4;
-			background-attachment: fixed;
-			color: black;
-			width: 88%;
-			margin: 0 auto;
-		}
-		main {
-			trasition: all .1s;
-		}
-		main.show-modal {
-			opacity: .5;
-		}
-		p {
-			padding-bottom: .2rem;
-			padding-left: .1rem;
-			padding-right: .1rem;
-		}
-		
-		h1 {
-			margin-bottom: 0;
-			padding-left: 1rem;
-		}
-		h3 {
-			padding-left: 1rem;
-		}
-		.section-title {
-			font-size: 1.5rem;
-			display: inline-block;
-			padding: 1rem;
-		}
-		form {
-			background-color: black;
-			color: white;
-			font-size: 1.25rem;
-			width: 50%;
-			margin: 1rem auto;
-		}
-		label {
-			display: inline-block;
-			width: 15%;
-			text-align: right;
-		}
-		input{
-			margin-top: .5rem;
-			font-size: 1rem;
-			width: 70%;
-		}
-		input[type="submit"] {
-			width: 40%;
-			margin-left: 30%;
-			margin-bottom: .5rem;
-		}
-		textarea {
-			margin-top: .5rem;
-			font-size: .8rem;
-			width:70%;
-		}
-		#header {
-			width: 100%;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			position: sticky;
-			top: 0px;
-			border-bottom: .25rem solid black;
-			margin: 2rem auto 1rem auto;
-		}
-		#title {
-			width: 40%;
-			font-family:  Arial;
-			color: white;
-			background-color: black;
-		}
-		#links {
-			width: 60%;
-			padding: 1rem 0;
-			text-align: center;
-			color: white;
-			background-color: black;
-			display:flex;
-			justify-content: space-around;
-		}	
-		#links a {
-			text-decoration: none;
-			color: white;
-		}
-		#links a:hover {
-			text-decoration: underline;
-		}
-		#intro {
-			width: 100%;
-			padding-top: 1rem;
-			padding-bottom: 1rem;
-			border-top: 1px solid black;
-			border-bottom: 1px solid black;
-		}
-		#features {
-			display: flex;
-			justify-content: space-between;
-			margin: 0 auto;
-			width: 100%;
-		}
-
-		.github-link {
-			display: inline-block;
-			margin-top: .5rem;
-			margin-bottom: 1rem;
-			width: 33.05%;
-		}
-
-		#about {
-			display: block;
-			width: 100%;
-			margin: .5rem auto;
-			border-top: 1px solid black;
-		}
-
-		.feature-card {
-			width: 32.4%;
-			height: 425px;
-			box-sizing: border-box;
-			border: 1px solid black;
-			border-radius: 10px;
-			overflow: hidden;
-			background-color: black;
-			color: white;
-			cursor: pointer;
-		}
-		.feature-card:hover {
-			border: 1px solid grey;
-			box-shadow: 2px 2px 4px grey, -2px -2px 4px grey;			
-		}
-
-		
-
-		img {
-			max-width: 100%;
-			height: 75%;
-		}
-		.modal {
-			position: fixed;
-			display: flex;
-			flex-wrap: wrap;
-			top: 50%;
-			left: 50vw;
-			background: black;
-			padding: 0;
-			width: 0px;
-			height: 0px;
-			color: white;
-			box-shadow: 5px 5px 20px rgba(0,0,0,.4);
-			border-radius: 10px;
-			font-size: 0;
-			overflow: hidden;
-			transition: all .1s;
-		}
-		.modal.show {
-			width: 50vw;
-			height: 60vh;
-			top: 20%;
-			left: 25vw;
-			font-size: 1rem;
-			z-index: 10;
-		}
-		.modal-img {
-			margin: 0;
-			width: 59%;
-			height: 65%;
-		}
-		.modal-img img {
-			width: 95%;
-			height: 95%;
-			margin: auto auto;
-			margin-top: 2%;
-			display: block;
-		}
-		.modal-text {
-			margin: 0;
-			width: 40%;
-			height: 65%;
-			position: relative;
-		}
-		.modal-description {
-			width: 100%;
-			height: 33%;
-			display: block;
-			border-top: 1px solid white;
-			padding: 1%;
-		}
-		.modal-links {
-			padding-top: 1rem;
-		}
-		.modal-links a {
-			border: 1px solid white;
-			border-radius: 3px;
-			color: white;
-			text-decoration: none;
-			margin-left: .75rem;
-			margin-right: .75rem;
-			padding: .1rem
-		}
-		
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<main>
-		<div id="header">
+		<div id="sticky-header">
 			<div id="title">
 				<h1>Joshua Hinman</h1>
 				<h3>Software Engineer</h3>
@@ -236,12 +20,27 @@
 		<div id="intro"><p>I am a passionate programmer with a solid skill set in both front and back end development.  I am constantly learning new things and am enthusiastic about taking on new challenges.  The projects here are written completely from scratch.  I hope you enjoy these examples of my work.</p></div>
 		<div class="section-title">Recent Projects</div><small>- click for details</small>
 		<div id="features">
-			<div class="feature-card" data-modal="trk-modal"><img src="trkthumb.jpg"><p><strong>Top Ramen King</strong> - a website for reading and posting reviews of instant ramen noodles.</p></div>
-			<div class="feature-card" data-modal="contacts-modal"><img src="contactsthumb.jpg"><p><strong>Contact Manager</strong> - an app for saving contact information.</div>
-			<div class="feature-card" data-modal="db-modal"><img src="dbthumb.jpg"><p><strong>Depth-First vs. Breadth-First</strong> - an animated demonstration of two search algorithms.</div>
+			<div class="feature-card" data-modal="trk-modal">
+				<div class="card-img">
+					<img src="trkthumb.jpg">
+				</div>
+				<p><strong>Top Ramen King</strong> - a website for reading and posting reviews of instant ramen noodles.</p>
+			</div>
+			<div class="feature-card" data-modal="contacts-modal">
+				<div class="card-img">
+					<img src="contactsthumb.jpg">
+				</div>
+				<p><strong>Contact Manager</strong> - an app for saving contact information.</p>
+			</div>
+			<div class="feature-card" data-modal="db-modal">
+				<div class="card-img">
+					<img src="dbthumb.jpg">
+				</div>
+				<p><strong>Depth-First vs. Breadth-First</strong> - an animated demonstration of two search algorithms.</p>
+			</div>
 		</div>
 		<br>
-		<div id="about">
+		<div id="about-me">
 		<div class="section-title">More About Me</div>
 		<p>My love of programming was first sparked when I was a teenager, fascinated by computer games. I learned to program in Visual Basic and then C++, with an interest in computer graphics.  I've since taken many programming classes, gradually expanding my knowledge and understanding of computers.</p>
 		<p>4 years ago, I started taking web development classes and decided to pursue it seriously, as a career.  I found an in-depth, mastery based curriculum at <a href="https://launchschool.com">Launch School</a>.  Since enrolling, I have dedicated myself to learning all layers of the web stack, and learning software engineering practices.   This program focused on building strong programming fundamentals using RUBY and then went on to teach relational databases with SQL and front end with Javascript.  Today, I've completed my school courses and have continued learning, using frameworks like Node Express and React.</p>
