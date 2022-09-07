@@ -194,12 +194,12 @@ img {
 	padding-top: 1rem;
 	display:  flex;
 	flex-wrap:  wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .modal-links a {
-	border: 1px solid white;
+	border: 1px solid lightblue;
 	border-radius: 3px;
-	color: white;
+	color: lightblue;
 	text-decoration: none;
 	margin-left: .75rem;
 	margin-right: .75rem;
@@ -252,14 +252,38 @@ img {
 	}
 	.modal.show {
 		width: 80vw;
-		height: 70vh;
+		height: 76vh;
+		top:  12vh;
 		left: 10vw;
+	}
+	.modal-img {
+	width: 100%;
+	height: 40%;
+	}
+	.modal-img img {
+		
+	}
+	.modal-text {
+		margin-top: auto;
+		width: 100%;
+		height: 28%;
+		position: relative;
+	}
+	.modal-description {
+		width: 100%;
+		height: 32%;
+		display: block;
+		border-top: 1px solid white;
+		padding: 1%;
 	}
 	.modal-links {
 		padding-bottom:  1px;
+		padding-top:  .25rem;
 	}
 	form {
 		width: 100%;
 	}
 }
+
+
 
