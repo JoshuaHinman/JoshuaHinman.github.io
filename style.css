@@ -243,12 +243,12 @@ img {
 	}
 	#title {
 		width: 100%;
-		font-size: 1.25rem;
+		font-size: 1rem;
 	}
 	
 	#links {
 		width: 100%;
-		font-size: .75rem;
+		font-size: .6rem;
 		flex-direction: column;
 	}
 	#intro {
