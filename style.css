@@ -238,13 +238,19 @@ img {
 
 @media screen and (orientation: portrait) {
 	body {
-			width: 98%;
-		}
-	#title {
-	width: 100%;
+		width: 98%;
 	}
+	#title {
+		width: 100%;
+		font-size: 1.5rem;
+	}
+	
 	#links {
 		width: 100%;
+		font-size: 1.5rem;
+	}
+	#intro {
+		font-size: .8rem
 	}
 	.feature-card {
 		width: 75%;
