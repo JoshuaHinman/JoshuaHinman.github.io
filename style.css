@@ -82,7 +82,7 @@ textarea {
 	text-align: center;
 	color: white;
 	background-color: black;
-	display:flex;
+	display: flex;
 	justify-content: space-around;
 }	
 #links a {
@@ -242,12 +242,12 @@ img {
 	}
 	#title {
 		width: 100%;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 	
 	#links {
 		width: 100%;
-		font-size: 1.5rem;
+		font-size: .9rem;
 	}
 	#intro {
 		font-size: .8rem
