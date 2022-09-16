@@ -83,6 +83,7 @@ textarea {
 	color: white;
 	background-color: black;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }	
 #links a {
@@ -247,7 +248,8 @@ img {
 	
 	#links {
 		width: 100%;
-		font-size: .9rem;
+		font-size: .75rem;
+		flex-direction: column;
 	}
 	#intro {
 		font-size: .8rem
