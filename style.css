@@ -150,7 +150,7 @@ img {
 	height: 90%;
 }
 .modal {
-	position: fixed;
+	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
 	top: 50%;
@@ -168,7 +168,8 @@ img {
 .modal.show {
 	width: 50vw;
 	height: 60vh;
-	top: 20%;
+	min-height: 450px;
+	top: 30%;
 	left: 25vw;
 	font-size: 1rem;
 	z-index: 10;
@@ -196,17 +197,20 @@ img {
 	display: block;
 	border-top: 1px solid white;
 	padding: 1%;
+	font-size: .9rem;
 }
 .modal-links {
 	padding-top: 1rem;
 	display:  flex;
 	flex-wrap:  wrap;
 	justify-content: space-around;
+	font-size: .9rem;
 }
 .modal-links a {
-	border: 1px solid lightblue;
+	border: 3px double black;
 	border-radius: 3px;
-	color: lightblue;
+	background-color: lightblue;
+	color: black;
 	text-decoration: none;
 	margin-left: .75rem;
 	margin-right: .75rem;
@@ -224,8 +228,14 @@ img {
 			margin: .5rem auto;
 	}
 	.modal.show {
-		width: 70vw;
-		left: 15vw;
+		width: 80vw;
+		left: 10vw;
+	}
+	.modal-text {
+		font-size: .9rem;
+	}
+	.modal-description {
+		font-size: .9rem;
 	}
 	.modal-links {
 		padding-bottom:  1px;
