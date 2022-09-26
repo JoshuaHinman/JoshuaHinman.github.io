@@ -16,7 +16,7 @@ main {
 	transition: all .1s;
 }
 main.show-modal {
-	opacity: .5;
+	opacity: .3;
 }
 a:link, a:visited {
 	color: black;
