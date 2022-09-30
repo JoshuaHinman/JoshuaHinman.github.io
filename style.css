@@ -198,6 +198,7 @@ img {
 	display: block;
 	border-top: 1px solid white;
 	padding: 1%;
+	padding-left: 1rem;
 	font-size: .9rem;
 }
 .modal-links {
