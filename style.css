@@ -22,6 +22,10 @@ main.show-modal {
 a:link, a:visited {
 	color: black;
 }
+
+.modal-description a, .modal-description a:visited {
+	color:white;
+}
 p {
 	padding-bottom: .2rem;
 	padding-left: .1rem;
@@ -128,7 +132,8 @@ textarea {
 }
 .feature-card {
 	width: 32.4%;
-	height: 425px;
+	height: 350px;
+	margin-top: 1rem;
 	box-sizing: border-box;
 	border: 1px solid black;
 	border-radius: 10px;
@@ -141,14 +146,19 @@ textarea {
 	border: 1px solid grey;
 	box-shadow: 2px 2px 4px grey, -2px -2px 4px grey;			
 }
+
+.feature-description {
+	height: 20%;
+}
 .card-img {
-	margin: 0 auto;
-	width: 90%;
-	height: 80%;
+	margin: .2rem auto;
+	width: 98%;
+	height: 75%;
 }
 img {
 	width: 100%;
-	height: 90%;
+	height: 100%;
+	object-fit: cover;
 }
 .modal {
 	position: absolute;
