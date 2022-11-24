@@ -161,7 +161,7 @@ img {
 	object-fit: cover;
 }
 .modal {
-	position: absolute;
+	position: fixed;
 	display: flex;
 	flex-wrap: wrap;
 	top: 50%;
@@ -180,7 +180,7 @@ img {
 	width: 50vw;
 	height: 60vh;
 	min-height: 450px;
-	top: 30%;
+	top: 20%;
 	left: 25vw;
 	font-size: 1rem;
 	z-index: 10;
